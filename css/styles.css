@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18pt;
+    font-size: 16pt;
   }
   
   body {
-    background-color: floralwhite;
+    background-color: white;
     color: black;
   }
   
@@ -19,7 +19,20 @@
   }
   
   .navbar-brand {
+    margin-left: 16px;
     font-family: Brush Script MT, cursive;
+  }
+
+  .brand {
+    font-family: Brush Script MT, cursive;
+    color: red;
+    font-size: 36pt;
+  }
+
+  .profile-name {
+    font-family: Brush Script MT, cursive;
+    color: black;
+    font-size: 36pt;
   }
 
   .navbar-dark .navbar-brand {
@@ -27,7 +40,7 @@
   }
 
   .navbar-dark .navbar-nav .nav-link {
-      color: floralwhite;
+      color: white;
   }
   
   h1 {
@@ -36,9 +49,15 @@
     text-transform: uppercase;
     font-size: 36pt;
   }
+
+  h4 {
+    margin: 16px 32px;
+    font-weight: bold;
+  }
   
   p {
     text-align: center;
+    margin: 0;
   }
   
   .nav-item a {
@@ -46,9 +65,9 @@
   }
   
   .masonry {
-    transition: all .5s ease-in-out;
     column-gap: 30px;
     column-fill: initial;
+    margin: 32px;
   }
   
   .masonry .brick {
@@ -56,37 +75,29 @@
     display: inline-block;
     vertical-align: top;
   }
+
+  .brick p {
+    text-align: start;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .board-container p {
+    text-align: start;
+    font-weight: bold;
+  }
   
   img {
     max-width: 100%;
     vertical-align: middle;
   }
-  
-  .masonry .brick img {
-    transition: all .5s ease-in-out;
-    backface-visibility: hidden;
-  }
-  
-  .masonry .brick:hover img {
+ 
+  .board-container img:hover {
     opacity: .75;
   }
-  
-  @media only screen and (max-width: 400px) {
-    .masonry {
-      column-count: 1;
-    }
-  }
-  
-  @media only screen and (min-width: 401px) and (max-width: 960px) {
-    .masonry {
-      column-count: 2;
-    }
-  }
-  
-  @media only screen and (min-width: 961px) {
-    .masonry {
-      column-count: 3;
-    }
+
+  .masonry .brick:hover img {
+    opacity: .75;
   }
   
   .footer {
@@ -98,10 +109,131 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase;
   }
   
   .footer a {
-    color: white;
+    color: red;
     text-decoration: underline;
+  }
+
+  .horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+    margin-bottom: 0;
+  }
+
+  .icon {
+    max-width: 200px;
+  }
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 16px;
+  padding: 0;
+}
+
+.board-container:last-child {
+  margin: 0;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  margin: 32px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid darkgray;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.button {
+  color: black !important;
+  text-decoration: none;
+  background-color: darkgray;
+  padding: 8px 16px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  margin-left: 16px;
+  }
+
+  .button:hover {
+    background-color: lightgray;
+  }
+
+  .vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+  }
+
+  .forgot-password {
+    text-decoration: underline;
+    color: darkgray;
+  }
+
+  .form input {
+    padding: 8px;
+    margin: 8px;
+
+  }
+
+  @media only screen and (max-width: 400px) {
+    * {
+      font-size: 12pt;
+    }
+
+    .masonry {
+      column-count: 2;
+    }
+
+    .horizontal-container {
+      flex-direction: column;
+      margin: 32px;
+    }
+
+    .icon {
+      max-width: 100px;
+    }
+
+    .board-container {
+      margin-bottom: 16px;
+    }
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .masonry {
+      column-count: 4;
+    }
+  }
+  
+  @media only screen and (min-width: 961px) {
+    .masonry {
+      column-count: 6;
+    }
   }
