@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18pt;
+  }
+  
+  body {
+    background-color: floralwhite;
+    color: black;
+  }
+  
+  .page-wrap {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .content-wrap {
+    padding-bottom: 2.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: Brush Script MT, cursive;
+  }
+
+  .navbar-dark .navbar-brand {
+    color: red;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+      color: floralwhite;
+  }
+  
+  h1 {
+    padding: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 36pt;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .nav-item a {
+    color: black;
+  }
+  
+  .masonry {
+    transition: all .5s ease-in-out;
+    column-gap: 30px;
+    column-fill: initial;
+  }
+  
+  .masonry .brick {
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  
+  .masonry .brick img {
+    transition: all .5s ease-in-out;
+    backface-visibility: hidden;
+  }
+  
+  .masonry .brick:hover img {
+    opacity: .75;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  @media only screen and (min-width: 961px) {
+    .masonry {
+      column-count: 3;
+    }
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 2.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: underline;
+  }
